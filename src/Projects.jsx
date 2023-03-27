@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "./Cards";
 import BlogTron from "./assets/blogTron.png";
-import TabAwesome from "./assets/tabAwesome.png";
+import TabAwesome from "./assets/tabawesome.png";
 
 function Projects() {
   return (
