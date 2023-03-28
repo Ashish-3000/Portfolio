@@ -5,7 +5,7 @@ function Experience() {
   return (
     <div id="experience" className="mt-10">
       <div className="font-bold text-3xl">Experience</div>
-      <div className="flex mt-5 gap-10">
+      <div className="flex flex-col sm:flex-row mt-5 gap-10">
         <Cards
           srcPath={
             "https://m.media-amazon.com/images/G/31/social_share/amazon_logo._CB633266945_.png"

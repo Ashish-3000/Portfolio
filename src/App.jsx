@@ -10,7 +10,7 @@ import Contact from "./Contact";
 
 function App() {
   return (
-    <div className="mb-10">
+    <div className="mb-10 ml-5 mr-5 lg:ml-[9rem] lg:mr-[9rem] md:ml-[7rem] md:mr-[7rem] sm:ml-[5rem] sm:mr-[5rem]">
       <Nav />
       <Hero />
       <Experience />

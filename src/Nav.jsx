@@ -2,7 +2,7 @@ import React from "react";
 
 function Nav() {
   return (
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-col sm:flex-row justify-between">
       <div className="basis-1/4 text-lg">
         <a href="/">Ashish Singh</a>
       </div>

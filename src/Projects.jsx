@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div id="projects" className="mt-10 mb-10">
       <div className="font-bold text-3xl">Projects</div>
-      <div className="mt-5 flex gap-10">
+      <div className="mt-5 flex flex-col sm:flex-row gap-10">
         <Cards
           srcPath={BlogTron}
           roleName={"BlogTron"}
