@@ -2,12 +2,22 @@ import React from "react";
 import Cards from "./Cards";
 import BlogTron from "./assets/blogTron.png";
 import TabAwesome from "./assets/tabawesome.png";
+import MetaVerse from "./assets/metaverse.png";
+import Mapbox from "./assets/mapbox.png";
 
 function Projects() {
   return (
     <div id="projects" className="mt-10 mb-10">
       <div className="font-bold text-3xl">Projects</div>
       <div className="mt-5 flex flex-col sm:flex-row gap-10">
+        <Cards
+          srcPath={MetaVerse}
+          roleName={"Meta"}
+          links={"https://meta-verse-framer-next.vercel.app/"}
+          description={
+            "Created a website using NextJs, Framer Motion and TailwindCSS"
+          }
+        />
         <Cards
           srcPath={BlogTron}
           roleName={"BlogTron"}
@@ -25,9 +35,7 @@ function Projects() {
           }
         />
         <Cards
-          srcPath={
-            "https://github.com/Ashish-3000/IP-Address-Tracker/raw/master/design/desktop-preview.jpg                      "
-          }
+          srcPath={Mapbox}
           links={"https://ip-address-tracker-gules-nine.vercel.app/"}
           roleName={"IP Address Tracker"}
           description={
