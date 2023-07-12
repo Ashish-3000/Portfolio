@@ -12,10 +12,9 @@ function Nav() {
       <div className="mr-5">
         <a href="#projects">Projects</a>
       </div>
-      {/* TODO:
-         <div className="mr-5">
-          <a href="#blog">Blog</a>
-        </div> */}
+      <div className="mr-5">
+        <a href="https://clover.hashnode.dev/">Blog</a>
+      </div>
       <div>
         <a href="#contact">Contact</a>
       </div>

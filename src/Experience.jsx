@@ -17,7 +17,7 @@ function Experience() {
         />
         <Cards
           srcPath={
-            "https://solytics-partners.com/wp-content/themes/solyticspartners/images/logo.svg"
+            "https://uploads-ssl.webflow.com/6467508a50c9cba3661cc696/6467508a50c9cba3661cc657_uuid-c34c1356-a1d0-4982-b77e-9dc049846636.svg"
           }
           roleName={"Frontend Developer"}
           description={"Made components in react and static sites for the team"}
