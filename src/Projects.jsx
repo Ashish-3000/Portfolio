@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "./Cards";
-import BlogTron from "./assets/blogTron.png";
+import Unweave from "./assets/unweave.png";
 import TabAwesome from "./assets/tabawesome.png";
 import MetaVerse from "./assets/metaverse.png";
 import Mapbox from "./assets/mapbox.png";
@@ -19,9 +19,9 @@ function Projects() {
           }
         />
         <Cards
-          srcPath={BlogTron}
-          roleName={"BlogTron"}
-          links={"https://blog-tron-2-0.vercel.app/"}
+          srcPath={Unweave}
+          roleName={"Unweave"}
+          links={"https://unweave-henna.vercel.app/"}
           description={
             "Blogging Platform similar to that of Medium created using ReactJs, EditorJs, Firebase and MongoDB"
           }
