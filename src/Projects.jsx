@@ -4,12 +4,21 @@ import Unweave from "./assets/unweave.png";
 import TabAwesome from "./assets/tabawesome.png";
 import MetaVerse from "./assets/metaverse.png";
 import Mapbox from "./assets/mapbox.png";
+import JsonFormatter from "./assets/jsonformatter.png";
 
 function Projects() {
   return (
     <div id="projects" className="mt-10 mb-10">
       <div className="font-bold text-3xl">Projects</div>
-      <div className="mt-5 flex flex-col sm:flex-row gap-10">
+      <div className="mt-5 flex flex-col flex-wrap sm:flex-row gap-10">
+        <Cards
+          srcPath={JsonFormatter}
+          roleName={"Json Formatter"}
+          links={"https://json-parser-livid.vercel.app/"}
+          description={
+            "Formats your json data and let you copy or download in csv or txt format"
+          }
+        />
         <Cards
           srcPath={MetaVerse}
           roleName={"Meta"}
