@@ -45,7 +45,7 @@ function Hero() {
           <span className="rounded bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700">
             <a
               className="decoration-white hover:decoration-black"
-              href="https://docs.google.com/document/d/1PPPyTY69DqXgKN384lF6-QPLwzit2h_cLZ9uI199VaE/edit?usp=sharing"
+              href="https://dub.sh/kLZsGnJ"
             >
               Resume
             </a>

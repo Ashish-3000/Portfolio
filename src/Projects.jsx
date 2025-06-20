@@ -5,12 +5,21 @@ import TabAwesome from "./assets/tabawesome.png";
 import MetaVerse from "./assets/metaverse.png";
 import Mapbox from "./assets/mapbox.png";
 import JsonFormatter from "./assets/jsonformatter.png";
+import TrueWatchTime from "./assets/truewatchtime.png";
 
 function Projects() {
   return (
     <div id="projects" className="mt-10 mb-10">
       <div className="font-bold text-3xl">Projects</div>
       <div className="mt-5 flex flex-col flex-wrap sm:flex-row gap-10">
+        <Cards
+          srcPath={TrueWatchTime}
+          links={"https://chromewebstore.google.com/detail/ipilpgmkckmlbkecadjdbdhlhkipdnip?utm_source=item-share-cb"}
+          roleName={"True Watch Time"}
+          description={
+            "Chrome extension that shows true remaining YouTube watch time at any speed"
+          }
+        />
         <Cards
           srcPath={JsonFormatter}
           roleName={"Json Formatter"}

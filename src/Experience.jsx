@@ -8,7 +8,16 @@ function Experience() {
       <div className="flex flex-col sm:flex-row mt-5 gap-10">
         <Cards
           srcPath={
-            "https://m.media-amazon.com/images/G/31/social_share/amazon_logo._CB633266945_.png"
+            "https://d7s2x42om9.ufs.sh/f/iqqCYtr8lMtbud32sl0C1oT4ljMDivIYGPSrqyKHtXxNf89U"
+          }
+          roleName={"SDE"}
+          description={
+            "Worked with convey team to integrate APIs building features for the Last Mile Customers"
+          }
+        />
+        <Cards
+          srcPath={
+            "https://d7s2x42om9.ufs.sh/f/iqqCYtr8lMtbtarzM9ZDlavwN1KLz5WjTiA6C3s8yt9BVMkG"
           }
           roleName={"SDE"}
           description={
