@@ -5,7 +5,7 @@ import TabAwesome from "./assets/tabawesome.png";
 import MetaVerse from "./assets/metaverse.png";
 import Mapbox from "./assets/mapbox.png";
 import JsonFormatter from "./assets/jsonformatter.png";
-import TrueWatchTime from "./assets/truewatchtime.png";
+import TrueWatchTime from "./assets/TrueWatchTime.png";
 
 function Projects() {
   return (
