@@ -21,7 +21,7 @@ function Hero() {
         <div>
           <div>
             <div>
-              I had 7 months of experience of working with Amazon as a Software
+              I have around 3 years of experience of working with Amazon and Project44 as a Software
               Development Engineer.
             </div>
             <div>
@@ -29,7 +29,6 @@ function Hero() {
             </div>
           </div>
           <div>
-            I'm currently looking for a new role as a developer.{" "}
             <RoughNotation
               animationDelay="3000"
               animationDuration={1000}
