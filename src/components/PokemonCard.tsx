@@ -71,8 +71,8 @@ export function PokemonCard({
           {/* CARD (z-10) with float + rotate animation */}
           <div
             className={`relative z-10 w-full h-full rounded-2xl border cursor-pointer transition-transform duration-200 hover:scale-[1.03] ${theme === "dark"
-                ? "bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border-zinc-700 shadow-xl"
-                : "bg-gradient-to-br from-zinc-100 via-white to-zinc-50 border-zinc-300 shadow-xl"
+              ? "bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border-zinc-700 shadow-xl"
+              : "bg-gradient-to-br from-zinc-100 via-white to-zinc-50 border-zinc-300 shadow-xl"
               }`}
             style={{
               transform: "perspective(1000px) rotateY(-15deg) rotateX(5deg)",
@@ -103,18 +103,18 @@ export function PokemonCard({
             <div className="flex justify-center mt-8 mb-6">
               <div
                 className={`w-24 h-24 rounded-full flex items-center justify-center border overflow-hidden relative ${theme === "dark"
-                    ? "bg-black border-green-400 shadow-lg shadow-green-400/30"
-                    : "bg-gray-900 border-green-500 shadow-lg shadow-green-500/40"
+                  ? "bg-black border-green-400 shadow-lg shadow-green-400/30"
+                  : "bg-gray-900 border-green-500 shadow-lg shadow-green-500/40"
                   }`}
               >
                 <div
                   className={`absolute inset-0 rounded-full ${theme === "dark"
-                      ? "shadow-[0_8px_32px_-8px_rgba(34,197,94,0.4)]"
-                      : "shadow-[0_8px_32px_-8px_rgba(34,197,94,0.5)]"
+                    ? "shadow-[0_8px_32px_-8px_rgba(34,197,94,0.4)]"
+                    : "shadow-[0_8px_32px_-8px_rgba(34,197,94,0.5)]"
                     }`}
                 ></div>
                 <img
-                  src="/Profile.jpeg"
+                  src="/Ash.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover grayscale"
                 />
