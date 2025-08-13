@@ -20,39 +20,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* Header */}
-        <header
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            padding: "8px 16px",
-            background: "#2e1e0f", // brown background
-          }}
-        >
-          <Image
-            src="/Profile.jpeg" // ✅ Image in /public folder
-            alt="Ashish Avatar"
-            width={28}
-            height={28}
-            style={{ borderRadius: "4px" }}
-          />
-          <span style={{ color: "#e3c9a8", fontWeight: 500 }}>Ashish</span>
-        </header>
-
-        {/* Page Content */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
   );
 }
+
