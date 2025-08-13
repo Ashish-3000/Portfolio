@@ -13,7 +13,7 @@ export const PROFILE = {
     twitter: "",
   },
   summary:
-    "I build reliable backend services, integrations, and AI-powered developer tools. ~3 years across Java, React/Node, infra & internal tooling.",
+    "Curious problem-solver interested in building reliable backends, smooth integrations, and AI-powered dev tools — ~3 years in Java, React/Node, infra, and tooling.",
   skills: [
     "Java", "JavaScript", "Node.js", "React", "NextJs", "ExpressJS",
     "PostgreSQL", "MongoDB", "Redis", "AWS Lambda", "CloudWatch", "SQS", "S3", "SNS", "Docker",

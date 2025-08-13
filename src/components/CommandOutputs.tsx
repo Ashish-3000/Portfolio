@@ -1,6 +1,5 @@
 // components/CommandOutputs.tsx
 import { PROFILE, PROJECTS, HELP_COMMANDS } from "../config/constants";
-import { ThemeType } from "../types";
 import { Cmd } from "./Cmd";
 import { Mail, Github, Linkedin } from "lucide-react";
 
@@ -12,13 +11,16 @@ export function welcomeBanner() {
 
   return (
     <div>
-      <pre className="text-teal-400 font-bold leading-tight whitespace-pre text-[clamp(10px,3.2vw,16px)]">
+      {/* <pre className="text-teal-400 font-bold leading-tight whitespace-pre text-[clamp(10px,3.2vw,16px)]">
         {`╔${bar}╗
 ║ ${title} ║
 ╚${bar}╝`}
-      </pre>
+      </pre> */}
       <div className="mt-1">
-        Welcome to <Cmd>{PROFILE.name}</Cmd>&apos;s terminal. {PROFILE.summary}
+        Hi 👋, I am Ashish
+        <br />{PROFILE.summary}
+        <br />
+        Use terminal for interaction
       </div>
     </div>
   );
