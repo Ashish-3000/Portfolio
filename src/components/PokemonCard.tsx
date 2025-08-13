@@ -1,5 +1,6 @@
 // components/PokemonCard.tsx
 import { useRef } from "react";
+import Image from "next/image";
 import { PROFILE } from "../config/constants";
 import { ThemeType } from "../types";
 
@@ -18,13 +19,13 @@ export function PokemonCard({
   cardComplete,
   onCardClick,
 }: PokemonCardProps) {
-  if (!showCard) return null;
-
   // pick one highlighted corner per show (stable)
   const cornerRef = useRef<Corner>(
     ["tl", "tr", "bl", "br"][Math.floor(Math.random() * 4)] as Corner
   );
   const corner = cornerRef.current;
+
+  if (!showCard) return null;
 
   // corner positions for the glow (relative to the card wrapper)
   const pos: Record<Corner, React.CSSProperties> = {
@@ -113,9 +114,11 @@ export function PokemonCard({
                     : "shadow-[0_8px_32px_-8px_rgba(34,197,94,0.5)]"
                     }`}
                 ></div>
-                <img
+                <Image
                   src="/Ash.jpeg"
                   alt="Profile"
+                  width={96}
+                  height={96}
                   className="w-full h-full object-cover grayscale"
                 />
               </div>
