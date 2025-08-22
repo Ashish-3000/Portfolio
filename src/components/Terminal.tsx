@@ -97,11 +97,6 @@ export function Terminal({
 
                     <div className="space-y-2 text-sm leading-relaxed">
                         <div>{welcomeBanner()}</div>
-                        <div>
-                            <span>
-                                Type <Cmd>about</Cmd> to get started.
-                            </span>
-                        </div>
 
                         {lines.map((l) => (
                             <div key={l.id} className="whitespace-pre-wrap break-words">

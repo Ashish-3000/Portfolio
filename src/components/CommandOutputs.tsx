@@ -19,6 +19,9 @@ export function welcomeBanner() {
       <div className="mt-2">
         Type <Cmd>help</Cmd> to explore available commands.
       </div>
+      <div className="mt-2">
+        Press <Cmd>Tab</Cmd> to complete commands.
+      </div>
     </div>
   );
 }
