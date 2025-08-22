@@ -1,19 +1,19 @@
 import { PROFILE, PROMPT } from "../config/constants";
 import { Cmd } from "./Cmd";
 import { welcomeBanner } from "./CommandOutputs";
-import { Line } from "../types";
+import { Line, ThemeType } from "../types";
 
 interface TerminalProps {
-    theme: string;
+    theme: ThemeType;
     lines: Line[];
     input: string;
     suggestion: string;
     setInput: (val: string) => void;
     onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-    inputRef: React.RefObject<HTMLInputElement>;
+    inputRef: React.RefObject<HTMLInputElement | null>;
     iframeUrl: string | null;
     showCardOnClick: () => void;
-    setTheme: (theme: any) => void;
+    setTheme: (theme: ThemeType) => void;
 }
 
 export function Terminal({
