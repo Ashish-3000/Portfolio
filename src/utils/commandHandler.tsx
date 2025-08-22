@@ -1,4 +1,3 @@
-// utils/commandHandler.ts
 import { ReactElement } from "react";
 import { Line, ThemeType } from "../types";
 import { PROJECTS, PROFILE } from "../config/constants";
@@ -21,22 +20,29 @@ export function mkLine(content: ReactElement | string): Line {
   return {
     id: `line-${++idCounter}`,
     content: (
-      <div className="animate-fadeIn opacity-0" style={{ animation: "fadeIn 0.3s ease-out forwards" }}>
+      <div className="animate-fadeIn">
         {content}
       </div>
     ),
   };
 }
 
-export function themeSwitcher(theme: ThemeType, setTheme: (theme: ThemeType) => void, next?: string) {
+export function themeSwitcher(
+  theme: ThemeType,
+  setTheme: (theme: ThemeType) => void,
+  next?: string
+) {
   if (!next) {
     return (
       <span>
-        Current theme: <Cmd>{theme}</Cmd>. Use <Cmd>theme light</Cmd>, <Cmd>theme dark</Cmd> or <Cmd>theme auto</Cmd>.
+        Current theme: <Cmd>{theme}</Cmd>. Use <Cmd>theme light</Cmd>,{" "}
+        <Cmd>theme dark</Cmd> or <Cmd>theme auto</Cmd>.
       </span>
     );
   }
-  const normalized = ["light", "dark", "auto"].includes(next) ? (next as ThemeType) : undefined;
+  const normalized = ["light", "dark", "auto"].includes(next)
+    ? (next as ThemeType)
+    : undefined;
   if (!normalized) {
     const sanitizedNext = next.replace(/[<>"'&]/g, "");
     return (
@@ -53,7 +59,10 @@ export function themeSwitcher(theme: ThemeType, setTheme: (theme: ThemeType) => 
   );
 }
 
-export function openTarget(target?: string) {
+export function openTarget(
+  target?: string,
+  setIframeUrl?: (url: string) => void
+) {
   if (!target) {
     return (
       <span>
@@ -67,11 +76,16 @@ export function openTarget(target?: string) {
   if (lower === "resume" || lower === "cv") {
     const url = PROFILE?.resumeUrl;
     if (!url) return <span>No resume link found in profile.</span>;
-    if (typeof window !== "undefined") window.open(url, "_blank", "noopener,noreferrer");
+    if (setIframeUrl) setIframeUrl(url);
     return (
-      <span>
-        Opening <Cmd>{url}</Cmd>…
-      </span>
+      <div>
+        <div>
+          Opening in split view: <Cmd>{url}</Cmd>
+        </div>
+        <div className="text-teal-400">
+          -- Press Ctrl+C to close split --
+        </div>
+      </div>
     );
   }
 
@@ -86,22 +100,33 @@ export function openTarget(target?: string) {
           No link for <Cmd>{p.slug}</Cmd>.
         </span>
       );
-    if (typeof window !== "undefined") window.open(url, "_blank", "noopener,noreferrer");
+    if (setIframeUrl) setIframeUrl(url);
     return (
-      <span>
-        Opening <Cmd>{url}</Cmd>…
-      </span>
+      <div>
+        <div>
+          Opening in split view: <Cmd>{url}</Cmd>
+        </div>
+        <div className="text-teal-400">
+          -- Press Ctrl+C to close split --
+        </div>
+      </div>
     );
   }
 
   return (
     <span>
-      We don&apos;t open every URL. Try <Cmd>open resume</Cmd> or a project number instead.
+      We don&apos;t open every URL. Try <Cmd>open resume</Cmd> or a project
+      number instead.
     </span>
   );
 }
 
-export function runCommand(raw: string, theme: ThemeType, setTheme: (theme: ThemeType) => void): Line[] {
+export function runCommand(
+  raw: string,
+  theme: ThemeType,
+  setTheme: (theme: ThemeType) => void,
+  setIframeUrl?: (url: string) => void
+): Line[] {
   const parts = raw.trim().split(/\s+/);
   const cmd = (parts[0] || "").toLowerCase();
   const args = parts.slice(1);
@@ -132,11 +157,17 @@ export function runCommand(raw: string, theme: ThemeType, setTheme: (theme: Them
     case "clear":
       return [];
     case "open":
-      return [mkLine(openTarget(args[0]))];
+      return [mkLine(openTarget(args[0], setIframeUrl))];
     case "":
       return [];
     default:
       const sanitizedCmd = cmd.replace(/[<>"'&]/g, "");
-      return [mkLine(<span>Command not found: <Cmd>{sanitizedCmd}</Cmd>. Type <Cmd>help</Cmd>.</span>)];
+      return [
+        mkLine(
+          <span>
+            Command not found: <Cmd>{sanitizedCmd}</Cmd>. Type <Cmd>help</Cmd>.
+          </span>
+        ),
+      ];
   }
 }

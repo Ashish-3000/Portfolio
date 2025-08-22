@@ -4,23 +4,20 @@ import { Cmd } from "./Cmd";
 import { Mail, Github, Linkedin } from "lucide-react";
 
 export function welcomeBanner() {
-  const title = `${PROFILE.name.toUpperCase()} TERMINAL`;
-  const pad = 2; // 1 space on each side
-  const width = title.length + pad; // chars inside the box
-  const bar = "═".repeat(width);
-
   return (
-    <div>
-      {/* <pre className="text-teal-400 font-bold leading-tight whitespace-pre text-[clamp(10px,3.2vw,16px)]">
-        {`╔${bar}╗
-║ ${title} ║
-╚${bar}╝`}
-      </pre> */}
+    <div className="mt-1">
+      <div className="font-bold text-teal-400">
+        Welcome to {PROFILE.name.split(" ")[0]}’s Dev Terminal ⚡
+      </div>
       <div className="mt-1">
-        Hi 👋, I am Ashish
-        <br />{PROFILE.summary}
+        {PROFILE.title}
         <br />
-        Use terminal for interaction
+        Passionate about building <span className="text-teal-400">scalable backends</span>,{" "}
+        <span className="text-teal-400">smooth integrations</span>, and{" "}
+        <span className="text-teal-400">AI‑powered tools</span>.
+      </div>
+      <div className="mt-2">
+        Type <Cmd>help</Cmd> to explore available commands.
       </div>
     </div>
   );
