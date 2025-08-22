@@ -30,6 +30,18 @@ export const PROJECTS: Array<{
   repo?: string;
 }> = [
     {
+      slug: "pixable",
+      name: "Pixable – AI Website Generator",
+      blurb:
+        "AI-powered website generator that lets users create and deploy websites from a single prompt with automated code execution and dynamic UI components.",
+      highlights: [
+        "Built with Next.js, Inngest, and Prisma",
+        "Generates and deploys websites from a single prompt",
+        "Automated code execution with dynamic UI components",
+      ],
+      demo: "https://pixable.vercel.app/",
+    },
+    {
       slug: "true-watch-time",
       name: "True Watch Time",
       blurb:
