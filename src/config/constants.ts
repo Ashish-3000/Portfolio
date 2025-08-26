@@ -5,7 +5,7 @@ export const PROFILE = {
   title: "Software Engineer — Backend, AI tooling, Full‑stack",
   location: "India (IST)",
   email: "ashish02singh03@gmail.com",
-  resumeUrl: "https://dub.sh/kLZsGnJ",
+  resumeUrl: "https://dub.sh/4IvbC40",
   website: "https://portfolio-alpha-eight-17.vercel.app/",
   socials: {
     github: "https://github.com/ashish02singh03",

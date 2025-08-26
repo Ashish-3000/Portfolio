@@ -74,7 +74,7 @@ export function openTarget(
   const lower = target.trim().toLowerCase();
 
   if (lower === "resume" || lower === "cv") {
-    const url = PROFILE?.resumeUrl;
+    const url = "/Ashish_Resume.pdf";
     if (!url) return <span>No resume link found in profile.</span>;
     if (setIframeUrl) setIframeUrl(url);
     return (

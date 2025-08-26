@@ -77,7 +77,7 @@ export function experience() {
         <div className="rounded-xl border border-zinc-300 dark:border-zinc-800 p-3">
           <div className="font-medium">Software Developer — Project44</div>
           <div className="text-xs text-zinc-500 dark:text-zinc-400">
-            Nov 2023 – May 2025 | Bengaluru, Karnataka
+            Aug 2023 – May 2025 | Bengaluru, Karnataka
           </div>
           <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
             <li>
